@@ -25,20 +25,28 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 96px;
   background-color: #252525;
   padding: 8px; }
+  #menu-row, #menu-row * {
+    transition: height 200ms ease, padding 200ms ease, margin 200ms ease; }
 
 #logo {
   display: inline-block;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 8px; }
   #logo img {
     vertical-align: top;
     height: 64px; }
   #logo h1, #logo h2 {
-    line-height: 32px;
-    margin: 0; }
+    margin: 0;
+    font-weight: 300;
+    line-height: 24px; }
+  #logo h1 {
+    font-size: 20pt; }
+  #logo h2 {
+    font-size: 16pt; }
 
 #menu nav ul {
   list-style: none; }
@@ -47,8 +55,9 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 32px;
-  font-size: 20px;
+  line-height: 24px;
+  font-size: 14pt;
+  font-weight: 300;
   transition: text-shadow 200ms ease; }
   #menu nav a:hover {
     text-shadow: 0 0 10px white; }
@@ -56,32 +65,30 @@ body {
 @media only screen and (min-width: 1024px) {
   #logo-text {
     vertical-align: top;
-    margin: 0 16px;
+    margin: 8px 16px;
     display: inline-block; }
 
   #menu {
     display: inline-block;
-    float: right; }
+    float: right;
+    text-align: right; }
     #menu nav ul li {
       display: inline-block;
-      float: right;
-      margin: 0 16px; }
-      #menu nav ul li:first-child {
-        /* First-child, because the float reverses the order.
-        * It's actually going to be the last child.
-        */
+      margin: 8px 16px; }
+      #menu nav ul li:last-child {
         margin-right: 0; }
     #menu #social-media li {
-      margin: 0 2px;
       height: 32px;
-      width: 30px; }
-      #menu #social-media li a {
-        display: inline-block;
-        height: 32px;
-        width: 30px; }
-      #menu #social-media li img {
-        height: 30px;
-        width: 30px;
-        margin: 2px 0 0 0; } }
+      width: 32px;
+      padding: 1px;
+      margin: 4px 1px; }
+
+  .collapsed #menu-row {
+    height: 48px;
+    padding: 4px; }
+  .collapsed #logo {
+    margin: 0; }
+    .collapsed #logo img {
+      height: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
