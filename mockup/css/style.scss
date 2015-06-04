@@ -6,7 +6,7 @@ $bg-light: rgba(37,37,37,1);
 $hl: rgba(63,86,165,1);
 
 $w: 960px;
-$h: 80px;
+$h: 96px;
 $spacing: 16px;
 
 html {
@@ -32,21 +32,35 @@ body {
     height: $h;
     background-color: $bg-light;
     padding: $spacing / 2;
+    
+    &, * {
+        transition: height 200ms linear, padding 200ms linear, margin 200ms linear; 
+    }
 }
 
 #logo {
     display: inline-block;
     color: $fg;
     text-decoration: none;
+    margin: $spacing / 2;
     
     img {
         vertical-align: top;
-        height: $h - $spacing;
+        height: $h - $spacing * 2;
     }
     
     h1, h2 {
-        line-height: $spacing * 2;
         margin: 0;
+        font-weight: 300;
+        line-height: $spacing * 1.5;
+    }
+    
+    h1 {
+        font-size: 20pt;
+    }
+    
+    h2 {
+        font-size: 16pt;
     }
 
 }
@@ -61,8 +75,9 @@ body {
         color: $fg;
         text-transform: uppercase;
         letter-spacing: 2px;
-        line-height: $spacing * 2;
-        font-size: 20px;
+        line-height: $spacing * 1.5;
+        font-size: 14pt;
+        font-weight: 300;
         
         transition: text-shadow 200ms ease;
         
@@ -75,42 +90,43 @@ body {
 @media only screen and (min-width: 1024px) {
     #logo-text {
         vertical-align: top;
-        margin: 0 $spacing;
+        margin: ($spacing / 2) $spacing;
         display: inline-block;
     }
     
     #menu {
         display: inline-block;
         float: right;
+        text-align: right;
         
         nav ul li {
             display: inline-block;
-            float: right;
-            margin: 0 $spacing;
+            margin: ($spacing / 2) $spacing;
             
-            &:first-child {
-            /* First-child, because the float reverses the order.
-            * It's actually going to be the last child.
-            */
+            &:last-child {
                 margin-right: 0;
             }
         }
         
         #social-media li {
-            margin: 0 2px;
             height: 32px;
-            width: 30px;
+            width: 32px;
+            padding: 1px;
+            margin: 4px 1px;
+        }
+    }
+    
+    .collapsed {
+        #menu-row {
+            height: 48px;
+            padding: 4px;
+        }
             
-            a {
-                display: inline-block;
-                height: 32px;
-                width: 30px;
-            }
+        #logo {
+            margin: 0;
             
             img {
-                height: 30px;
-                width: 30px;
-                margin: 2px 0 0 0;
+                height: 40px;
             }
         }
     }
