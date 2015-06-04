@@ -29,7 +29,7 @@ body {
   background-color: #252525;
   padding: 8px; }
   #menu-row, #menu-row * {
-    transition: height 200ms ease, padding 200ms ease, margin 200ms ease; }
+    transition: height 200ms linear, padding 200ms linear, margin 200ms linear; }
 
 #logo {
   display: inline-block;
