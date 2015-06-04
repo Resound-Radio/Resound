@@ -70,6 +70,18 @@ body {
         /* First-child, because the float reverses the order.
         * It's actually going to be the last child.
         */
-        margin-right: 0; } }
+        margin-right: 0; }
+    #menu #social-media li {
+      margin: 0 2px;
+      height: 32px;
+      width: 30px; }
+      #menu #social-media li a {
+        display: inline-block;
+        height: 32px;
+        width: 30px; }
+      #menu #social-media li img {
+        height: 30px;
+        width: 30px;
+        margin: 2px 0 0 0; } }
 
 /*# sourceMappingURL=style.css.map */

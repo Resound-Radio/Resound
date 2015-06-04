@@ -68,8 +68,8 @@ body {
         
         &:hover {
             text-shadow: 0 0 10px $fg;
-        }
-    }
+        }            
+    }        
 }
 
 @media only screen and (min-width: 1024px) {
@@ -93,6 +93,24 @@ body {
             * It's actually going to be the last child.
             */
                 margin-right: 0;
+            }
+        }
+        
+        #social-media li {
+            margin: 0 2px;
+            height: 32px;
+            width: 30px;
+            
+            a {
+                display: inline-block;
+                height: 32px;
+                width: 30px;
+            }
+            
+            img {
+                height: 30px;
+                width: 30px;
+                margin: 2px 0 0 0;
             }
         }
     }
