@@ -20,12 +20,12 @@ body {
   width: 960px;
   margin: auto; }
 
-header {
+#page-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%; }
-  header * {
+  #page-header * {
     transition: height 200ms linear, padding 200ms linear, margin 200ms linear; }
 
 #menu-row {

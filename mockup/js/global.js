@@ -8,11 +8,11 @@ $(document).ready(function () {
     $("body").css("height", "100%");
     
     $(window).scroll(function (e) {
-        if ($(this).scrollTop && !($("header").hasClass("collapsed"))) {
+        if ($(this).scrollTop && !($("#page-header").hasClass("collapsed"))) {
             $("#social-media,#logo-text").fadeOut(time);
-            $("header").addClass("collapsed");
-        } else if (!($(this).scrollTop()) && $("header").hasClass("collapsed")) {
-            $("header").removeClass("collapsed");
+            $("#page-header").addClass("collapsed");
+        } else if (!($(this).scrollTop()) && $("#page-header").hasClass("collapsed")) {
+            $("#page-header").removeClass("collapsed");
             $("#social-media,#logo-text").fadeIn(time);
         }
     });
