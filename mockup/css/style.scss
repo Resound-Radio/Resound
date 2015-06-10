@@ -25,24 +25,39 @@ body {
     margin: auto;
 }
 
-#menu-row {
+header {
     position: fixed;
     top: 0; left: 0;
+    width: 100%;
+    
+    * {
+        transition: height 200ms linear,
+            padding 200ms linear,
+            margin 200ms linear; 
+    }
+}
+
+#menu-row {
     width: 100%;
     height: $h;
     background-color: $bg-light;
     padding: $spacing / 2;
-    
-    &, * {
-        transition: height 200ms linear, padding 200ms linear, margin 200ms linear; 
-    }
+}
+
+.listen {
+    line-height: 40px;
+    font-size: 16pt;
+    font-weight: 300;
+    color: $fg;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 #logo {
     display: inline-block;
     color: $fg;
     text-decoration: none;
-    margin: $spacing / 2;
+    margin: ($spacing / 2) 0;
     
     img {
         vertical-align: top;
@@ -116,6 +131,10 @@ body {
         }
     }
     
+    #menu-toggle {
+        display: none;
+    }
+    
     .collapsed {
         #menu-row {
             height: 48px;
@@ -128,6 +147,10 @@ body {
             img {
                 height: 40px;
             }
+        }
+        
+        #listen {
+            display: none;
         }
     }
 }
