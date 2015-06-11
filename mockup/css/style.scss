@@ -3,7 +3,7 @@
 $fonts: "Source Sans Pro", sans-serif;
 $fg: rgba(255,255,255,1);
 $bg-light: rgba(37,37,37,1);
-$bg-dark: rgba(15,15,15,1);
+$bg-dark: rgba(15,15,15,1); 
 $hl: rgba(63,86,165,1);
 
 $w: 960px;
@@ -83,26 +83,44 @@ main, footer {
 
 }
 
+@mixin menu-link-style {
+    text-decoration: none;
+    color: $fg;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+    font-size: 14pt;
+    font-weight: 300;
+        
+    transition: text-shadow 200ms ease;
+        
+    &:hover {
+        text-shadow: 0 0 10px $fg;
+    }            
+}    
+
 #menu nav {
    ul {
         list-style: none;
     }
     
     a {
-        text-decoration: none;
-        color: $fg;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        @include menu-link-style;
         line-height: $spacing * 1.5;
-        font-size: 14pt;
-        font-weight: 300;
-        
-        transition: text-shadow 200ms ease;
-        
-        &:hover {
-            text-shadow: 0 0 10px $fg;
-        }            
     }        
+}
+
+#social-media li {
+    height: 32px;
+    width: 32px;
+    padding: 1px;
+    margin: 4px 1px;
+}
+
+#menu-toggle {
+    @include menu-link-style;
+    line-height: 80px;
+    float: right;
 }
 
 section:nth-child(odd) {
@@ -129,6 +147,10 @@ section:nth-child(even) {
         top: 192px;
     }
     
+    section {
+        margin-top: $spacing * 2;
+    }
+    
     #logo-text {
         vertical-align: top;
         margin: ($spacing / 2) $spacing;
@@ -149,12 +171,7 @@ section:nth-child(even) {
             }
         }
         
-        #social-media li {
-            height: 32px;
-            width: 32px;
-            padding: 1px;
-            margin: 4px 1px;
-        }
+
     }
     
     #menu-toggle {
@@ -178,5 +195,33 @@ section:nth-child(even) {
         #listen {
             display: none;
         }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .center {
+        width: 100%;
+        margin: 0;
+    }
+    
+    #logo-text, #menu {
+        display: none;
+    }
+    
+    #menu {
+        position: absolute;
+        top: 96px; left: 0;
+        width: 100%;
+        z-index: 2;
+        background: $bg-light;
+        padding: $spacing;
+    }
+    
+    #menu li {
+        margin-bottom: $spacing;
+    }
+    
+    #social-media li {
+        display: inline-block;
     }
 }
