@@ -73,8 +73,7 @@ main, footer {
   line-height: 24px; }
   #menu nav a:hover {
     text-shadow: 0 0 10px white; }
-
-#social-media li {
+#menu nav#social-media li {
   height: 32px;
   width: 32px;
   padding: 1px;

@@ -107,14 +107,14 @@ main, footer {
     a {
         @include menu-link-style;
         line-height: $spacing * 1.5;
-    }        
-}
-
-#social-media li {
-    height: 32px;
-    width: 32px;
-    padding: 1px;
-    margin: 4px 1px;
+    }
+    
+    &#social-media li {
+        height: 32px;
+        width: 32px;
+        padding: 1px;
+        margin: 4px 1px;
+    }
 }
 
 #menu-toggle {
@@ -170,8 +170,6 @@ section:nth-child(even) {
                 margin-right: 0;
             }
         }
-        
-
     }
     
     #menu-toggle {
