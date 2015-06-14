@@ -35,14 +35,6 @@ main, footer {
   background-color: #252525;
   padding: 8px; }
 
-.listen {
-  line-height: 40px;
-  font-size: 16pt;
-  font-weight: 300;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase; }
-
 #logo {
   display: inline-block;
   color: white;
@@ -69,7 +61,7 @@ main, footer {
   letter-spacing: 2px;
   font-size: 14pt;
   font-weight: 300;
-  transition: text-shadow 200ms ease;
+  transition: text-shadow 200ms ease, line-height 200ms linear;
   line-height: 24px; }
   #menu nav a:hover {
     text-shadow: 0 0 10px white; }
@@ -86,8 +78,9 @@ main, footer {
   letter-spacing: 2px;
   font-size: 14pt;
   font-weight: 300;
-  transition: text-shadow 200ms ease;
+  transition: text-shadow 200ms ease, line-height 200ms linear;
   line-height: 80px;
+  margin: 0 16px;
   float: right; }
   #menu-toggle:hover {
     text-shadow: 0 0 10px white; }
@@ -108,10 +101,10 @@ section:nth-child(even) {
     margin: auto; }
 
   main, footer {
-    top: 192px; }
+    top: 208px; }
 
   section {
-    margin-top: 32px; }
+    margin-bottom: 32px; }
 
   #logo-text {
     vertical-align: top;
@@ -161,6 +154,29 @@ section:nth-child(even) {
     margin-bottom: 16px; }
 
   #social-media li {
-    display: inline-block; } }
+    display: inline-block; }
+
+  main, footer {
+    top: 176px; }
+
+  section {
+    margin: 0; }
+
+  section p:first-child {
+    margin-top: 0; }
+
+  .collapsed #menu-row {
+    height: 48px;
+    padding: 4px 8px; }
+  .collapsed #menu {
+    top: 48px; }
+  .collapsed #menu-toggle {
+    line-height: 40px; }
+  .collapsed #logo {
+    margin: 0; }
+    .collapsed #logo img {
+      height: 40px; }
+  .collapsed #listen {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
