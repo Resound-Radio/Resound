@@ -68,12 +68,7 @@ function resound_radio_setup() {
 		'quote',
 		'link',
 	) );
-
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'resound_radio_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+    
 }
 endif; // resound_radio_setup
 add_action( 'after_setup_theme', 'resound_radio_setup' );
@@ -86,33 +81,24 @@ add_action( 'after_setup_theme', 'resound_radio_setup' );
  * @global int $content_width
  */
 function resound_radio_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'resound_radio_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'resound_radio_content_width', 960 );
 }
 add_action( 'after_setup_theme', 'resound_radio_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
- */
-function resound_radio_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'resound-radio' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'resound_radio_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function resound_radio_scripts() {
 	wp_enqueue_style( 'resound-radio-style', get_stylesheet_uri() );
+    
+    // Include Genericons for easy, lazy icons for things
+    wp_enqueue_style("resound-radio-genericons", get_Template_directory_uri() . "/genricons/genericons.css");
+    
+    // And now we need our Google font includes:
+    wp_enqueue_style("resound-radio-google-fonts", "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic");
+    
+    // JQuery is good:
+    wp_enqueue_script("resound-radio-jquery"), "//code.jquery.com/jquery-1.11.3.min.js");
 
 	wp_enqueue_script( 'resound-radio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
