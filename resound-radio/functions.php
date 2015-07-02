@@ -40,9 +40,9 @@ function resound_radio_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'resound-radio' ),
+        'social' => esc_html__( 'Social Media', 'resound-radio' )
 	) );
 
 	/*
@@ -98,9 +98,10 @@ function resound_radio_scripts() {
     wp_enqueue_style("resound-radio-google-fonts", "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic");
     
     // JQuery is good:
-    wp_enqueue_script("resound-radio-jquery"), "//code.jquery.com/jquery-1.11.3.min.js");
+    wp_enqueue_script("resound-radio-jquery", "//code.jquery.com/jquery-1.11.3.min.js");
 
-	wp_enqueue_script( 'resound-radio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+    // Skip this because I can do better in jQuery
+	//wp_enqueue_script( 'resound-radio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'resound-radio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -109,6 +110,21 @@ function resound_radio_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'resound_radio_scripts' );
+
+function resound_radio_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'resound_radio_logo_section', array(
+        'title' => __('Logo', 'resound-radio'),
+        'priority' => 30,
+        'description' => 'Upload a logo to be displayed by the site name and description') );
+    $wp_customize->add_setting( 'resound_radio_logo');
+    $wp_customize->add_control( new WP_Customize_Image_Control ($wp_customize, 'resound_radio_logo', array(
+        'label' => __('Logo', 'resound-radio'),
+        'section' => 'resound_radio_logo_section',
+        'settings' => 'resound_radio_logo')
+    ));
+    
+}
+add_action( 'customize_register', 'resound_radio_theme_customizer');
 
 /**
  * Implement the Custom Header feature.
