@@ -27,6 +27,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Typography
 # Elements
 # Forms
+# Header
 # Navigation
 	## Links
 	## Menus
@@ -277,6 +278,10 @@ textarea {
 	line-height: 1.5;
 }
 
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -489,6 +494,50 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#masthead-wrapper {
+    width: 100%;
+    background: #252525;
+    height: 96px;
+    padding: 8px;
+}
+
+#masthead {
+    width: 960px;
+}
+
+#site-branding {
+    display: inline-block;
+}
+
+#title-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    vertical-align: top;
+    margin: 8px;
+}
+
+@media screen and (max-width: 480px) {
+    #title-link {
+        display: none;
+    }
+}
+
+#title-link h1,
+#title-link h2 {
+    font-weight: 300;
+    margin: 0;
+    line-height: 32px;
+}
+
+#logo {
+    vertical-align: top;
+}
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -522,9 +571,9 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: inline-block;
+	float: right;
+    text-align: right;
 }
 
 .main-navigation ul {
@@ -535,13 +584,15 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+    display: inline-block;
 	position: relative;
 }
 
 .main-navigation a {
-	display: block;
+	display: inline-block;
 	text-decoration: none;
+    color: #ffffff;
+    line-height: 40px;
 }
 
 .main-navigation ul ul {

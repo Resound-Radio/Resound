@@ -98,7 +98,7 @@ function resound_radio_scripts() {
     wp_enqueue_style("resound-radio-google-fonts", "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic");
     
     // JQuery is good:
-    wp_enqueue_script("resound-radio-jquery", "//code.jquery.com/jquery-1.11.3.min.js");
+    wp_enqueue_script("jquery", "//code.jquery.com/jquery-1.11.3.min.js", "1.11.3", true);
 
     // Skip this because I can do better in jQuery
 	//wp_enqueue_script( 'resound-radio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -111,11 +111,14 @@ function resound_radio_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'resound_radio_scripts' );
 
+/**
+ * Register a logo image uploader
+ */
 function resound_radio_theme_customizer( $wp_customize ) {
     $wp_customize->add_section( 'resound_radio_logo_section', array(
         'title' => __('Logo', 'resound-radio'),
         'priority' => 30,
-        'description' => 'Upload a logo to be displayed by the site name and description') );
+        'description' => 'Upload a logo to be displayed in the site header') );
     $wp_customize->add_setting( 'resound_radio_logo');
     $wp_customize->add_control( new WP_Customize_Image_Control ($wp_customize, 'resound_radio_logo', array(
         'label' => __('Logo', 'resound-radio'),
@@ -125,11 +128,6 @@ function resound_radio_theme_customizer( $wp_customize ) {
     
 }
 add_action( 'customize_register', 'resound_radio_theme_customizer');
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
