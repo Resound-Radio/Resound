@@ -27,9 +27,12 @@ Header & body text: Source Sans Pro from Google Fonts, in the following weights:
 * Get Involved (we need a better title for this)
 * On-Air
 
-## Plugins
+## Random notes
 Things that should be contained in plugins so they don't break if another theme is used:
 * Custom post types:
  * DJ bios
  * Anything else?
 * Document visual sections (shortcode)
+
+Widgets:
+Chuck's Cam and Cedar's link for widgets? (Include widget area in footer?)
