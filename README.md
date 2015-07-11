@@ -26,3 +26,10 @@ Header & body text: Source Sans Pro from Google Fonts, in the following weights:
 * Blog
 * Get Involved (we need a better title for this)
 * On-Air
+
+## Plugins
+Things that should be contained in plugins so they don't break if another theme is used:
+* Custom post types:
+ * DJ bios
+ * Anything else?
+* Document visual sections (shortcode)
