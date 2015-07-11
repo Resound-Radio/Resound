@@ -92,7 +92,7 @@ function resound_radio_scripts() {
 	wp_enqueue_style( 'resound-radio-style', get_stylesheet_uri() );
     
     // Include Genericons for easy, lazy icons for things
-    wp_enqueue_style("resound-radio-genericons", get_Template_directory_uri() . "/genricons/genericons.css");
+    wp_enqueue_style("genericons", get_template_directory_uri() . "/genericons/genericons.css");
     
     // And now we need our Google font includes:
     wp_enqueue_style("resound-radio-google-fonts", "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic");

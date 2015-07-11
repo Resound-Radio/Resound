@@ -279,6 +279,7 @@ textarea {
 }
 
 body {
+    color: #ffffff;
     font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -348,10 +349,32 @@ big {
 }
 
 /*--------------------------------------------------------------
+## Genericon setup
+--------------------------------------------------------------*/
+.social-navigation a:before,
+.menu-toggle {
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+}
+
+/*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+    position: relative; /* so that we can absolutely position things off the bottom of the page and not off the bototm of the window */
+    min-height: 100%; /* so our background looks legit even if there's not a ton of content */
 }
 
 *,
@@ -361,7 +384,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: url("images/hex.png"), radial-gradient(circle, #39548d 0%, #0d1320 100%), no-repeat;
 }
 
 blockquote:before,
@@ -504,10 +527,6 @@ textarea {
     padding: 8px;
 }
 
-#masthead {
-    width: 960px;
-}
-
 #site-branding {
     display: inline-block;
 }
@@ -535,6 +554,17 @@ textarea {
 
 #logo {
     vertical-align: top;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#colophon {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #0f0f0f;
 }
 
 /*--------------------------------------------------------------
@@ -586,14 +616,22 @@ a:active {
 .main-navigation li {
     display: inline-block;
 	position: relative;
+    padding-left: 24px;
 }
 
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
     color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
     line-height: 40px;
 }
+
+.main-navigation a:hover {
+    text-shadow: 0 0 5px rgba(255,255,255,1);
+}
+    
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -682,6 +720,119 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+## Social Navigation icons
+--------------------------------------------------------------*/
+
+.social-navigation a {
+    font-size: 0; /* hide the plaintext title */
+}
+
+.social-navigation a::before {
+	font-size: 24px;
+    line-height: 40px;
+}
+
+.social-navigation a[href*="codepen.io"]:before {
+	content: "\f216";
+}
+
+.social-navigation a[href*="digg.com"]:before {
+	content: "\f221";
+}
+
+.social-navigation a[href*="dribbble.com"]:before {
+	content: "\f201";
+}
+
+.social-navigation a[href*="dropbox.com"]:before {
+	content: "\f225";
+}
+
+.social-navigation a[href*="facebook.com"]:before {
+	content: "\f204";
+}
+
+.social-navigation a[href*="flickr.com"]:before {
+	content: "\f211";
+}
+
+.social-navigation a[href*="foursquare.com"]:before {
+	content: "\f226";
+}
+
+.social-navigation a[href*="plus.google.com"]:before {
+	content: "\f206";
+}
+
+.social-navigation a[href*="github.com"]:before {
+	content: "\f200";
+}
+
+.social-navigation a[href*="instagram.com"]:before {
+	content: "\f215";
+}
+
+.social-navigation a[href*="linkedin.com"]:before {
+	content: "\f208";
+}
+
+.social-navigation a[href*="pinterest.com"]:before {
+	content: "\f210";
+}
+
+.social-navigation a[href*="getpocket.com"]:before {
+	content: "\f224";
+}
+
+.social-navigation a[href*="polldaddy.com"]:before {
+	content: "\f217";
+}
+
+.social-navigation a[href*="reddit.com"]:before {
+	content: "\f222";
+}
+
+.social-navigation a[href*="stumbleupon.com"]:before {
+	content: "\f223";
+}
+
+.social-navigation a[href*="tumblr.com"]:before {
+	content: "\f214";
+}
+
+.social-navigation a[href*="twitter.com"]:before {
+	content: "\f202";
+}
+
+.social-navigation a[href*="vimeo.com"]:before {
+	content: "\f212";
+}
+
+.social-navigation a[href*="wordpress.com"]:before,
+.social-navigation a[href*="wordpress.org"]:before {
+	content: "\f205";
+}
+
+.social-navigation a[href*="youtube.com"]:before {
+	content: "\f213";
+}
+
+.social-navigation a[href*="mailto:"]:before {
+	content: "\f410";
+}
+
+.social-navigation a[href*="spotify.com"]:before {
+	content: "\f515";
+}
+
+.social-navigation a[href*="twitch.tv"]:before {
+	content: "\f516";
+}
+
+.social-navigation a[href$="/feed/"]:before {
+	content: "\f413";
+}
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -735,6 +886,12 @@ a:active {
 	margin-right: auto;
 }
 
+@media screen and (min-width: 960px) {
+    .contentwidth {
+        width: 960px;
+    }
+}
+
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -783,6 +940,8 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
