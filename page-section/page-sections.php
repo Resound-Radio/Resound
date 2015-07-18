@@ -3,7 +3,7 @@
 Plugin Name: Page Sections
 Plugin URI: http://danrobinsonmedia.com
 Description: Adds a shortcode for creating sections in posts and pages
-Version: 0.1
+Version: 1
 Author: Dan Robinson
 Author URI: http://danrobinsonmedia.com
 License: MIT
