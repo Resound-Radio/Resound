@@ -36,8 +36,16 @@ if(!function_exists('resound_radio_register_post_types')) {
     function resound_radio_register_post_types() {
         register_post_type('resound_staff', array(
             'labels' => array(
-                'name' => 'Staff Bios',
-                'singular_name' => 'Staff Bio'),
+                'name' => __('Staff Bios'),
+                'singular_name' => __('Staff Bio'),
+                'add_new_item' => _x( 'Add New', 'Add New Staff Bio'),
+                'edit_item' => __('Edit Staff Bio'),
+                'new_item' => __('New Staff Bio'),
+                'view_item' => __('View Staff Bio'),
+                'search_items' => __('Search Staff Bios'),
+                'not_found' => __('No staff person found'),
+                'not_found_in_trash' => __('No staff bio found in trash'),
+                'all_items' => __('All Staff Bios')),
             'description' => 'Information about one of our excellent staff members',
             'public' => true,
             'show_in_nav_menus' => false,
