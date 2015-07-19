@@ -1,6 +1,7 @@
 <?php
 /*
 Plugin Name: Resound Post Types
+Plugin URI: http://www.resoundradio.com/plugin/resound-post-types
 Description: Defines custom post types for use with the Resound Radio theme
 Version: 1
 Author: Dan Robinson
