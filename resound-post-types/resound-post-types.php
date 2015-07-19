@@ -50,7 +50,9 @@ if(!function_exists('resound_radio_register_post_types')) {
                 'excerpt',
                 'thumbnail',
                 'page-attributes'),
-            'rewrite' => 'staff'));
+            'rewrite' => array(
+                'slug' => 'staff',
+            )));
     }
     
     add_action('init', 'resound_radio_register_post_types');
