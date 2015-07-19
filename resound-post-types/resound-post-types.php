@@ -1,14 +1,13 @@
 <?php
 /*
-Plugin Name: Page Sections
-Plugin URI: http://www.resoundradio.com/plugin/page-sections
-Description: Adds a shortcode for creating sections in posts and pages
+Plugin Name: Resound Post Types
+Description: Defines custom post types for use with the Resound Radio theme
 Version: 1
 Author: Dan Robinson
 Author URI: http://danrobinsonmedia.com
 License: MIT
 License URI: http://opensource.org/licenses/MIT
-Text-Domain: page-sections
+Text-Domain: resound-post-types
 Domain Paith: /languages
 
 Copyright (c) 2015 Dan Robinson
@@ -32,20 +31,26 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-if(!defined('WPINC')) {
-    die;
-}
-
-if(!function_exists('ps_section_shortcode')) {
-    function ps_section_shortcode($atts, $content = null) {
-        return '<section class="page-section">' . do_shortcode($content) . '</section>';
-    }
-}
-
-if(!function_exists('ps_section_register_shortcode')) {
-    function ps_section_register_shortcode() {
-        add_shortcode('section', 'ps_section_shortcode');
+if(!function_exists('resound_radio_register_post_types')) {
+    function resound_radio_register_post_types() {
+        register_post_type('resound_staff', array(
+            'labels' => array(
+                'name' => 'Staff Bios',
+                'singular_name' => 'Staff Bio'),
+            'description' => 'Information about one of our excellent staff members',
+            'public' => true,
+            'show_in_nav_menus' => false,
+            'menu_icon' => 'dashicons-businessman',
+            'menu_position' => 20,
+            'supports' => array(
+                'title',
+                'editor',
+                'revisions',
+                'excerpt',
+                'thumbnail',
+                'page-attributes'),
+            'rewrite' => 'staff'));
     }
     
-    add_action('init', 'ps_section_register_shortcode');
+    add_action('init', 'resound_radio_register_post_types');
 }
