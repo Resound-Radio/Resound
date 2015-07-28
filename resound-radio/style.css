@@ -28,6 +28,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Navigation
 	## Links
 	## Menus
+    ## Social Navigation Icons
 # Accessibility
 # Alignments
 # Clearings
@@ -46,7 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -276,8 +277,7 @@ textarea {
 }
 
 body {
-    color: #ffffff;
-    font-family: "Source Sans Pro", sans-serif;
+    color: lightgrey;
 }
 
 h1,
@@ -287,6 +287,7 @@ h4,
 h5,
 h6 {
 	clear: both;
+    margin-top: 0;
 }
 
 p {
@@ -519,7 +520,7 @@ textarea {
 
 #masthead-wrapper {
     width: 100%;
-    background: #252525;
+    background: rgba(37,37,37,1);
     height: 96px;
     padding: 8px;
 }
@@ -553,6 +554,42 @@ textarea {
     vertical-align: top;
 }
 
+#listen-now {
+    margin-bottom: 2rem;
+    height: 80px;
+}
+
+#listen-now a {
+    display: block;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 32px;
+    height: 80px;
+    width: 320px;
+}
+
+#listen-now a * {
+    transition: fill 80ms ease;
+}
+
+#listen-bg {
+    fill: rgba(63,86,165,1);
+}
+
+#listen-arrow, #listen-text {
+    fill: rgba(255,255,255,1);
+}
+
+#listen-now a:hover #listen-bg {
+    fill: rgba(255,255,255,1);
+}
+
+#listen-now a:hover #listen-arrow, #listen-now a:hover #listen-text {
+    fill: rgba(37,37,37,1);
+}
+    
+    
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -561,7 +598,20 @@ textarea {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #0f0f0f;
+    background: rgba(15,15,15,1);
+    padding: 1rem;
+    
+    line-height: 32px;  
+}
+
+#footer-links {
+    display: inline-block;
+    float: right;
+}
+
+#footer-links img {
+    height: 32px;
+    vertical-align: middle;
 }
 
 /*--------------------------------------------------------------
@@ -571,21 +621,17 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: white;
 }
 
 a:visited {
-	color: purple;
+	color: white;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
-}
-
-a:focus {
-	outline: thin dotted;
+	color: royalblue;
 }
 
 a:hover,
@@ -623,6 +669,7 @@ a:active {
     font-size: 20px;
     font-weight: 300;
     line-height: 40px;
+    height: 40px;
 }
 
 .main-navigation a:hover {
@@ -677,12 +724,6 @@ a:active {
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a {
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -883,10 +924,24 @@ a:active {
 	margin-right: auto;
 }
 
-@media screen and (min-width: 960px) {
-    .contentwidth {
-        width: 960px;
-    }
+.segment {
+    background: rgba(37,37,37,1);
+    border-left: 2px solid lightgrey;
+    padding: 1rem;
+}
+
+.contentwidth {
+    width: 960px;
+}
+
+.two-thirds-left {
+    width: 634px;
+    float: left;
+}
+
+.one-third-right {
+    width: 304px;
+    float: right;
 }
 
 /*--------------------------------------------------------------
@@ -938,10 +993,6 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 
-.page-section {
-    background: #252525;
-}
-
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -963,15 +1014,30 @@ a:active {
 	display: inline;
 }
 
+.entry-header {
+    margin: 0 0 1.5em;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 0;
 }
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+h1.entry-title {
+    margin: 0;
+}
+
+.entry-title a {
+    text-decoration: none;
+}
+
+.entry-footer span {
+    margin-right: 1.5em;
 }
 
 /*--------------------------------------------------------------

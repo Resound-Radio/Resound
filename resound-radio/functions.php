@@ -74,6 +74,23 @@ endif; // resound_radio_setup
 add_action( 'after_setup_theme', 'resound_radio_setup' );
 
 /**
+ * Register widget areas
+ */
+function resound_radio_widgets_init() {
+    register_sidebar( array(
+        'name' => 'Widget Area',
+        'id' => 'sidebar-1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>'
+    ));
+}
+
+add_action( 'widgets_init', 'resound_radio_widgets_init');
+    
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

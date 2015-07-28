@@ -37,5 +37,14 @@
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
     </div>
+    <div id="listen-now" class="contentwidth aligncenter">
+        <a target="_blank" href="http://www.cedarville.edu/Media/Resound.aspx">
+            <svg width="320" height="80">
+                <polygon id="listen-bg" points="0,0 320,0 240,80 0,80" />
+                <polygon id="listen-arrow" points="200,24 240,40 200,56" />
+                <text id="listen-text" x="20" y="50">Listen Now! </text>    
+            </svg>
+        </a>
+    </div>
 
 	<div id="content" class="site-content contentwidth aligncenter">
