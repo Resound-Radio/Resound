@@ -20,9 +20,3 @@ Header & body text: Source Sans Pro from Google Fonts, in the following weights:
 * [Swiper 3.0.7](http://www.idangero.us/swiper/)
   * CSS: https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.7/css/swiper.min.css
   * JS: https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.7/js/swiper.jquery.min.js
-
-### Pages
-* Home (includes "about"-type information)
-* Blog
-* Get Involved (we need a better title for this)
-* On-Air
