@@ -1193,3 +1193,11 @@ object {
 .mmt_container .reveal-modal {
     background: rgba(37,37,37,1) !important;
 }
+
+.mmt_container h4 {
+    font-size: 24px;
+}
+
+.mmt_container h6 {
+    font-size: 12px;
+}
