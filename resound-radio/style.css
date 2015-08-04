@@ -4,7 +4,7 @@ Theme URI: http://www.resoundradio.com
 Author: Dan Robinson
 Author URI: http://danrobinsonmedia.com
 Description: Theme designed for Resound Radio. Based on Underscores (http://underscores.me).
-Version: 1.0.3
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: resound-radio
@@ -514,6 +514,10 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+label {
+    display: block;
 }
 
 /*--------------------------------------------------------------
