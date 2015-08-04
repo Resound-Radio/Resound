@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info contentwidth aligncenter">
-            <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'resound-radio' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'resound-radio' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'resound-radio' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'resound-radio' ), 'WordPress' ); ?></a>
             <span class="sep">|</span>
             Resound Radio is operated by the students of <a href="http://www.cedarville.edu">Cedarville University</a>
             <div id="footer-links">

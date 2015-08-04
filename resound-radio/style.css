@@ -4,7 +4,7 @@ Theme URI: http://www.resoundradio.com
 Author: Dan Robinson
 Author URI: http://danrobinsonmedia.com
 Description: Theme designed for Resound Radio. Based on Underscores (http://underscores.me).
-Version: 1.0.2
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: resound-radio
@@ -41,7 +41,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
-# Plugin Overrides
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -772,19 +771,6 @@ a:active {
     line-height: 40px;
 }
 
-/* Icon for Chuck's Cam link
-    License: Exposure by Sergey Demushkin, hosted on
-    the Noun Project.
-    CC-BY-3.0.
-    https://thenounproject.com/mockturtle/collection/interface-and-web-icon/?i=137087
-*/
-
-.social-navigation a[href*="chucks-cam"] {
-    font-size: 20px;
-    line-height: 40px;
-    vertical-align: bottom;
-}
-
 .social-navigation a[href*="codepen.io"]:before {
 	content: "\f216";
 }
@@ -947,10 +933,6 @@ a:active {
 
 .segment *:first-child {
     margin-top: 0;
-}
-
-.segment *:last-child {
-    margin-bottom: 0;
 }
 
 .contentwidth {
@@ -1184,12 +1166,4 @@ object {
 
 .gallery-caption {
 	display: block;
-}
-
-/*--------------------------------------------------------------
-# Plugin Overrides
---------------------------------------------------------------*/
-
-.mmt_container .reveal-modal {
-    background: rgba(37,37,37,1) !important;
 }
