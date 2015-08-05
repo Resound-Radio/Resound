@@ -4,7 +4,7 @@ Theme URI: http://www.resoundradio.com
 Author: Dan Robinson
 Author URI: http://danrobinsonmedia.com
 Description: Theme designed for Resound Radio. Based on Underscores (http://underscores.me).
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: resound-radio
@@ -543,12 +543,6 @@ label {
     margin: 8px;
 }
 
-@media screen and (max-width: 480px) {
-    #title-link {
-        display: none;
-    }
-}
-
 #title-link h1,
 #title-link h2 {
     font-weight: 300;
@@ -656,7 +650,8 @@ a:active {
 }
 
 .main-navigation ul {
-	display: none;
+	display: block;
+    position: relative;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -664,8 +659,7 @@ a:active {
 
 .main-navigation li {
     display: inline-block;
-	position: relative;
-    padding-left: 24px;
+    margin-left: 24px;
 }
 
 .main-navigation a {
@@ -684,10 +678,14 @@ a:active {
     
 
 .main-navigation ul ul {
+    display: block;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    background: rgba(63,86,165,1);
+    border-left: 2px solid white;
+    text-align: left;
 	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 40px;
 	left: -999em;
 	z-index: 99999;
 }
@@ -698,10 +696,13 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+    min-width: 8em;
+
 }
 
 .main-navigation ul ul li {
+    display: block;
+    margin: 0 24px;
 
 }
 
@@ -732,13 +733,8 @@ a:active {
 .main-navigation .current_page_ancestor > a {
 }
 
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+.menu-toggle {
+    display: none;
 }
 
 .site-main .comment-navigation,
