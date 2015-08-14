@@ -116,6 +116,9 @@ function resound_radio_scripts() {
     
     // JQuery is good:
     wp_enqueue_script("jquery", "//code.jquery.com/jquery-1.11.3.min.js", "1.11.3", true);
+    
+    // Add our own JS functions
+    wp_enqueue_script("resound-radio-global-js", get_template_directory_uri() . '/js/global.js', array('jquery'), '20150813', true );
 
     // Skip this because I can do better in jQuery
 	//wp_enqueue_script( 'resound-radio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
