@@ -70,9 +70,9 @@
         </div>
         
         <div id="app-links">
-            <a href="https://play.google.com/store/apps/details?id=edu.cedarville.resoundradio"><img alt="Get it on Google Play"
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=edu.cedarville.resoundradio"><img alt="Get it on Google Play"
                src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"></a>
-            <a href="https://geo.itunes.apple.com/us/app/resound-radio/id1023901979?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;background-size:auto 45px;width:165px;height:45px;"></a>
+            <a target="_blank" href="https://geo.itunes.apple.com/us/app/resound-radio/id1023901979?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;background-size:auto 45px;width:165px;height:45px;"></a>
         </div>
     </div>
 
