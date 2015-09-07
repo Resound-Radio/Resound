@@ -58,14 +58,22 @@
             </nav><!-- #site-navigation -->
         </header><!-- #masthead -->
     </div>
-    <div id="listen-now" class="contentwidth aligncenter">
-        <a data-popup="true" data-popup-options="width=317,height=150" data-popup-title="Resound Radio Stream" target="_blank" href="http://www.cedarville.edu/Media/Resound.aspx">
-            <svg width="320" height="80">
-                <polygon id="listen-bg" points="0,0 320,0 240,80 0,80" />
-                <polygon id="listen-arrow" points="200,24 240,40 200,56" />
-                <text id="listen-text" x="20" y="50">Listen Now! </text>    
-            </svg>
-        </a>
+    <div id="stream-links" class="contentwidth aligncenter">
+        <div id="listen-now">
+            <a data-popup="true" data-popup-options="width=317,height=150" data-popup-title="Resound Radio Stream" target="_blank" href="http://www.cedarville.edu/Media/Resound.aspx">
+                <svg width="320" height="80">
+                    <polygon id="listen-bg" points="0,0 320,0 240,80 0,80" />
+                    <polygon id="listen-arrow" points="200,24 240,40 200,56" />
+                    <text id="listen-text" x="20" y="50">Listen Now! </text>    
+                </svg>
+            </a>
+        </div>
+        
+        <div id="app-links">
+            <a href="https://play.google.com/store/apps/details?id=edu.cedarville.resoundradio"><img alt="Get it on Google Play"
+               src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"></a>
+            <a href="https://geo.itunes.apple.com/us/app/resound-radio/id1023901979?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;background-size:auto 45px;width:165px;height:45px;"></a>
+        </div>
     </div>
 
 	<div id="content" class="site-content contentwidth aligncenter">

@@ -547,23 +547,27 @@ label {
 #title-link h2 {
     font-weight: 300;
     margin: 0;
-    line-height: 32px;
+    line-height: 2rem;
 }
 
 #logo {
     vertical-align: top;
 }
 
-#listen-now {
+#stream-links {
     margin-bottom: 2rem;
     height: 80px;
 }
 
+#listen-now {
+    display: inline-block;
+}
+
 #listen-now a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 2rem;
     height: 80px;
     width: 320px;
 }
@@ -587,8 +591,17 @@ label {
 #listen-now a:hover #listen-arrow, #listen-now a:hover #listen-text {
     fill: rgba(37,37,37,1);
 }
-    
-    
+
+#app-links {
+    display: inline-block;
+    height: 80px;
+    vertical-align: top;
+    padding: 17.5px 0;
+}
+
+#app-links a {
+    margin-left: 1rem;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -601,7 +614,7 @@ label {
     background: rgba(15,15,15,1);
     padding: 1rem;
     
-    line-height: 32px;
+    line-height: 2rem;
 }
 
 #footer-links {
@@ -610,7 +623,7 @@ label {
 }
 
 #footer-links img {
-    height: 32px;
+    height: 2rem;
     vertical-align: middle;
 }
 
