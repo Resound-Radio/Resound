@@ -351,6 +351,7 @@ big {
 ## Genericon setup
 --------------------------------------------------------------*/
 .social-navigation a:before,
+.menu-item-has-children > a:after,
 .menu-toggle {
     -moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -687,6 +688,15 @@ a:active {
 
 .main-navigation a:hover {
     text-shadow: 0 0 5px rgba(255,255,255,1);
+}
+
+/* Add a down arrow to menus with submenus */
+.menu-item-has-children > a:after {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 40px;
+    content: '\f431';
+    margin-left: 0.5rem;
 }
     
 
