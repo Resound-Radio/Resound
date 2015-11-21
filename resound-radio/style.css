@@ -4,7 +4,7 @@ Theme URI: http://www.resoundradio.com
 Author: Dan Robinson
 Author URI: http://danrobinsonmedia.com
 Description: Theme designed for Resound Radio. Based on Underscores (http://underscores.me).
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: resound-radio
@@ -357,7 +357,7 @@ big {
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
 	font-family: "Genericons";
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -673,17 +673,17 @@ a:active {
 
 .main-navigation li {
     display: inline-block;
-    margin-left: 24px;
+    margin-left: 1.5rem;
 }
 
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
-    line-height: 40px;
-    height: 40px;
+    line-height: 2.5rem;
+    height: 2.5rem;
 }
 
 .main-navigation a:hover {
@@ -694,7 +694,7 @@ a:active {
 .menu-item-has-children > a:after {
     display: inline-block;
     vertical-align: top;
-    line-height: 40px;
+    line-height: 2.5rem;
     content: '\f431';
     margin-left: 0.5rem;
 }
@@ -708,14 +708,10 @@ a:active {
     text-align: left;
 	float: left;
 	position: absolute;
-	top: 40px;
+	top: 2.5rem;
 	left: -999em;
 	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+    padding: 0.625rem 0;
 }
 
 .main-navigation ul ul a {
@@ -791,8 +787,8 @@ a:active {
 }
 
 .social-navigation a::before {
-	font-size: 24px;
-    line-height: 40px;
+	font-size: 1.5rem;
+    line-height: 2.5rem;
 }
 
 /* Icon for Chuck's Cam link
@@ -803,8 +799,8 @@ a:active {
 */
 
 .social-navigation a[href*="chucks-cam"] {
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
     vertical-align: bottom;
 }
 
